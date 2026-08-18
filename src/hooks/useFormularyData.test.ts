@@ -220,4 +220,66 @@ describe('useFormularyData hook', () => {
       expect(result.current.isDataUpdateAvailable).toBe(true);
     });
   });
+
+  it('detects update when version datasheet changes after initial remote boot', async () => {
+    // 1. Initial boot: version sheet is 1787036813, data sheet has Paracetamol
+    global.fetch = vi.fn().mockImplementation((url: string) => {
+      if (url.includes('gid=411569782')) {
+        return Promise.resolve({
+          ok: true,
+          headers: new Headers({ 'content-type': 'text/csv' }),
+          text: async () => 'data_version,1787036813',
+        } as Response);
+      }
+      return Promise.resolve({
+        ok: true,
+        headers: new Headers({ 'content-type': 'text/csv' }),
+        text: async () => 'Generic Name\n"Paracetamol 500mg"',
+      } as Response);
+    });
+
+    const { result } = renderHook(() =>
+      useFormularyData()
+    );
+
+    await waitFor(() => expect(result.current.isLoading).toBe(false));
+    expect(result.current.medications).toHaveLength(1);
+
+    // 2. Now datasheet is updated on Google Sheets to 1787036814
+    global.fetch = vi.fn().mockImplementation((url: string) => {
+      if (url.includes('gid=411569782')) {
+        return Promise.resolve({
+          ok: true,
+          headers: new Headers({ 'content-type': 'text/csv' }),
+          text: async () => 'data_version,1787036814',
+        } as Response);
+      }
+      return Promise.resolve({
+        ok: true,
+        headers: new Headers({ 'content-type': 'text/csv' }),
+        text: async () => 'Generic Name\n"Paracetamol 500mg"\n"Ibuprofen 200mg"',
+      } as Response);
+    });
+
+    // 3. Trigger manual/background refresh
+    let checkResult: any;
+    await act(async () => {
+      checkResult = await result.current.refreshData();
+    });
+
+    expect(checkResult.hasUpdate).toBe(true);
+    expect(result.current.isDataUpdateAvailable).toBe(true);
+    expect(result.current.pendingVersion).toBe('1787036814');
+
+    // 4. Apply update
+    await act(async () => {
+      await result.current.applyDataUpdate();
+    });
+
+    expect(result.current.isDataUpdateAvailable).toBe(false);
+    expect(result.current.medications).toHaveLength(2);
+    const dbVer = await getStoredVersion();
+    expect(dbVer?.version).toBe('1787036814');
+  });
 });
+

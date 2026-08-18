@@ -26,13 +26,24 @@ export function isRemoteVersionNewer(
   localVer: string | null,
   remoteVer: string | null
 ): boolean {
-  if (!remoteVer) return false;
-  if (!localVer) return true;
+  if (!remoteVer || !remoteVer.trim()) return false;
+  if (!localVer || !localVer.trim()) return true;
 
   const cleanLocal = localVer.trim();
   const cleanRemote = remoteVer.trim();
 
   if (cleanLocal === cleanRemote) return false;
+
+  const isPlaceholderLocal =
+    cleanLocal === '2.0.0-initial' ||
+    cleanLocal === 'initial' ||
+    cleanLocal.startsWith('remote-') ||
+    cleanLocal.startsWith('manual-') ||
+    cleanLocal.startsWith('temp-') ||
+    cleanLocal === 'dev' ||
+    cleanLocal === 'unknown';
+
+  if (isPlaceholderLocal) return true;
 
   const numLocal = Number(cleanLocal);
   const numRemote = Number(cleanRemote);
@@ -41,7 +52,16 @@ export function isRemoteVersionNewer(
     return numRemote > numLocal;
   }
 
-  if (cleanLocal === '2.0.0-initial') return true;
+  const stripPrefix = (v: string) => v.replace(/^v\.?/i, '').trim();
+  const strippedLocal = stripPrefix(cleanLocal);
+  const strippedRemote = stripPrefix(cleanRemote);
+
+  const numStrippedLocal = Number(strippedLocal);
+  const numStrippedRemote = Number(strippedRemote);
+
+  if (!Number.isNaN(numStrippedLocal) && !Number.isNaN(numStrippedRemote)) {
+    return numStrippedRemote > numStrippedLocal;
+  }
 
   return cleanRemote.localeCompare(cleanLocal, undefined, { numeric: true }) > 0;
 }

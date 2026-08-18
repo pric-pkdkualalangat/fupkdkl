@@ -19,8 +19,12 @@ describe('versionSentinel service', () => {
     expect(isRemoteVersionNewer('1785414792', '1785414466')).toBe(false);
     expect(isRemoteVersionNewer('1785414792', '1785414792')).toBe(false);
     expect(isRemoteVersionNewer('2.0.0-initial', '1785414792')).toBe(true);
+    expect(isRemoteVersionNewer('remote-1785414466', '1785414792')).toBe(true);
+    expect(isRemoteVersionNewer('manual-1785414466', '1785414792')).toBe(true);
     expect(isRemoteVersionNewer(null, '1785414792')).toBe(true);
     expect(isRemoteVersionNewer('1785414792', null)).toBe(false);
+    expect(isRemoteVersionNewer('v1.0.0', 'v1.1.0')).toBe(true);
+    expect(isRemoteVersionNewer('v1.1.0', 'v1.0.0')).toBe(false);
   });
 
   it('computes deterministic content hash for medication records', () => {

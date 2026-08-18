@@ -1,6 +1,12 @@
-# Ignore all Markdown documentation
+# Ignore arbitrary Markdown documentation, with exceptions for AI navigation
 *.md
 **/*.md
+!AGENTS.md
+!CLAUDE.md
+!CONTEXT.md
+!CONTEXT-MAP.md
+!DESIGN.md
+!**/context.md
 
 # Dependencies
 node_modules/

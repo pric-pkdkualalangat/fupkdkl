@@ -40,7 +40,16 @@ export function useFormularyData(options: UseFormularyDataOptions = {}) {
 
   // Fetch remote data and seed IndexedDB for the very first launch
   const loadFromRemote = useCallback(async (): Promise<Medication[]> => {
-    const targetVer = `remote-${Date.now()}`;
+    let targetVer = '1';
+    try {
+      const versionResult = await syncService.checkUpdate(null);
+      if (versionResult.remoteVersion) {
+        targetVer = versionResult.remoteVersion;
+      }
+    } catch {
+      // Non-fatal fallback if version check fails during initial seed
+    }
+
     const { medications: remoteMeds, versionInfo: remoteVerInfo } =
       await syncService.syncData(targetVer);
     setVersionInfo(remoteVerInfo);
@@ -103,7 +112,17 @@ export function useFormularyData(options: UseFormularyDataOptions = {}) {
 
   // Step 3: Prompt-First Data Update trigger (called when user taps "Update Data Now")
   const applyDataUpdate = useCallback(async () => {
-    const targetVersion = pendingVersion || `manual-${Date.now()}`;
+    let targetVersion = pendingVersion;
+    if (!targetVersion) {
+      try {
+        const check = await syncService.checkUpdate(versionInfo?.version ?? null);
+        targetVersion = check.remoteVersion;
+      } catch {
+        // Fallback
+      }
+    }
+    targetVersion = targetVersion || versionInfo?.version || '1';
+
     try {
       const currentHash = versionInfo?.contentHash;
       const { medications: updatedMeds, versionInfo: newVerInfo } =
