@@ -6,13 +6,10 @@
     <title>District Drug Formulary — PKD Kuala Langat</title>
     <script type="text/javascript">
       // Single Page Apps for GitHub Pages SPA routing fallback
-      const pathSegmentsToKeep = 1;
       const l = window.location;
       if (l.pathname.endsWith('/intro') || l.pathname.endsWith('/intro/')) {
-        // Fallback redirection for static SPA route handling
-        window.location.replace(
-          l.protocol + '//' + l.host + l.pathname.slice(0, l.pathname.indexOf('/gemini-fupkdkl/') + 16) + 'intro'
-        );
+        const basePath = l.pathname.replace(/\/intro\/?$/, '/');
+        window.location.replace(l.protocol + '//' + l.host + basePath + 'intro');
       }
     </script>
   </head>
