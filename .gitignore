@@ -7,6 +7,8 @@
 !CONTEXT-MAP.md
 !DESIGN.md
 !**/context.md
+!docs/**/*.md
+!palmedex-kit/**/*.md
 
 # Dependencies
 node_modules/
@@ -14,6 +16,7 @@ node_modules/
 # Build outputs & caches
 dist/
 dist-ssr/
+dev-dist/
 .vite/
 .cache/
 *.local

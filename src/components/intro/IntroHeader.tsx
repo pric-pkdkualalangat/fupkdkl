@@ -37,17 +37,24 @@ export function IntroHeader({
           >
             <div className="p-1 bg-brand-500/10 dark:bg-brand-500/15 rounded-xl sm:rounded-2xl border border-brand-500/25 shadow-sm shrink-0 overflow-hidden flex items-center justify-center group-hover:scale-105 transition-transform">
               <img
+                src={`${import.meta.env.BASE_URL}icon-192-light.png`}
+                alt=""
+                aria-hidden="true"
+                className="size-8 sm:size-10 object-contain rounded-lg sm:rounded-xl dark:hidden"
+              />
+              <img
                 src={`${import.meta.env.BASE_URL}icon-192.png`}
-                alt="PKDKL Formulary Logo"
-                className="size-8 sm:size-10 object-contain rounded-lg sm:rounded-xl"
+                alt="Palmedex Logo"
+                className="size-8 sm:size-10 object-contain rounded-lg sm:rounded-xl hidden dark:block"
               />
             </div>
             <div className="min-w-0 flex-1">
               <h1 className="font-extrabold text-xs sm:text-base leading-tight text-slate-900 dark:text-white tracking-tight truncate">
-                District Drug Formulary <span className="text-brand-600 dark:text-brand-400">PKD Kuala Langat</span>
+                <span>Palme</span>
+                <span className="text-brand-600 dark:text-brand-400">dex</span>
               </h1>
               <p className="text-[10px] sm:text-xs text-slate-500 dark:text-slate-400 font-medium truncate">
-                Pejabat Kesihatan Daerah Kuala Langat
+                Medication Reference Tool • PKD Kuala Langat
               </p>
             </div>
           </button>

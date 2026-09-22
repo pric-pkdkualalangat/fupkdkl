@@ -17,7 +17,7 @@ export function IntroInstallGuide() {
             How to Install as a PWA App
           </h2>
           <p className="text-slate-600 dark:text-slate-300 mt-2">
-            Add the District Drug Formulary directly to your smartphone home screen for offline access without app store downloads.
+            Add Palmedex directly to your smartphone home screen for offline access without app store downloads.
           </p>
         </div>
 

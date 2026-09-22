@@ -32,7 +32,7 @@ describe('PWAUpdatePrompt component', () => {
 
     expect(screen.getByText('App Update Available')).toBeInTheDocument();
     expect(
-      screen.getByText(/A new build of District Drug Formulary is ready/i)
+      screen.getByText(/A new build of Palmedex is ready/i)
     ).toBeInTheDocument();
 
     const updateBtn = screen.getByRole('button', { name: /Update App Now/i });

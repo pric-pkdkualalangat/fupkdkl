@@ -17,12 +17,21 @@ export function Footer({ onOpenSettings }: FooterProps) {
       <div className="flex flex-row items-center justify-between gap-2 w-full max-w-4xl mx-auto">
         <div className="flex flex-row items-center justify-start gap-1.5 overflow-hidden whitespace-nowrap">
           <img
-            src={`${import.meta.env.BASE_URL}icon-192.png`}
-            alt="PKDKL Logo"
-            className="size-3.5 sm:size-4 rounded object-contain shrink-0"
+            src={`${import.meta.env.BASE_URL}icon-192-light.png`}
+            alt=""
+            aria-hidden="true"
+            className="size-3.5 sm:size-4 rounded object-contain shrink-0 dark:hidden"
           />
-          <span className="font-semibold text-slate-700 dark:text-slate-300 truncate max-w-[120px] sm:max-w-none">
-            © Pejabat Kesihatan Daerah Kuala Langat
+          <img
+            src={`${import.meta.env.BASE_URL}icon-192.png`}
+            alt="Palmedex Logo"
+            className="size-3.5 sm:size-4 rounded object-contain shrink-0 hidden dark:block"
+          />
+          <span className="font-semibold text-slate-700 dark:text-slate-300 shrink-0">
+            <ResponsiveLabel
+              full="© Pejabat Kesihatan Daerah Kuala Langat"
+              short="© PKD Kuala Langat"
+            />
           </span>
           <span className="hidden sm:inline text-slate-400 dark:text-slate-600 shrink-0">•</span>
           <span className="text-slate-500 dark:text-slate-400 flex items-center gap-1 shrink-0">

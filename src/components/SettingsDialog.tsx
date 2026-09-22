@@ -360,7 +360,7 @@ export function SettingsDialog({
             <div className="flex items-center gap-2">
               <Database className="size-4 text-brand-600 dark:text-brand-400" aria-hidden="true" />
               <span className="text-xs font-bold text-slate-700 dark:text-slate-300">
-                Formulary Data Version
+                Medication Data Version
               </span>
             </div>
             <span className="font-mono text-xs font-extrabold bg-brand-500/10 text-brand-700 dark:text-brand-300 px-2.5 py-0.5 rounded-full border border-brand-500/20">
@@ -396,7 +396,7 @@ export function SettingsDialog({
               Check System Updates
             </h3>
             <p className="text-xs text-slate-600 dark:text-slate-400">
-              Check for new Google Sheets formulary datasets & PWA code updates.
+              Check for new Google Sheets medication datasets & PWA code updates.
             </p>
           </div>
 

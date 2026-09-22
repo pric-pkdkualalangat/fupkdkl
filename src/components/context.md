@@ -24,6 +24,7 @@ Houses all primary user interface elements for the formulary application, includ
 | [`TourOverlay.tsx`](file:///Users/nina/development/projects/fupkdkl/src/components/TourOverlay.tsx) | SVG clip-path spotlight mask highlighting target DOM elements during the tour. | `TourOverlay` |
 | [`TourTooltip.tsx`](file:///Users/nina/development/projects/fupkdkl/src/components/TourTooltip.tsx) | Positioned floating card displaying tour step title, description, and navigation buttons. | `TourTooltip` |
 | [`InitialLoadScreen.tsx`](file:///Users/nina/development/projects/fupkdkl/src/components/InitialLoadScreen.tsx) | Offline error screen displayed when the initial remote seed fails without cached data. | `InitialLoadScreen` |
+| [`ColdBootSplash.tsx`](file:///Users/nina/development/projects/fupkdkl/src/components/ColdBootSplash.tsx) | Loading splash screen with animated Palmedex vector emblem, pulse halo, and ECG telemetry during IndexedDB hydration. | `ColdBootSplash` |
 | [`RecentMedications.tsx`](file:///Users/nina/development/projects/fupkdkl/src/components/RecentMedications.tsx) | Dropdown menu rendering recently selected medications for instant lookup. | `RecentMedications` |
 | [`UpdateToast.tsx`](file:///Users/nina/development/projects/fupkdkl/src/components/UpdateToast.tsx) | Success confirmation toast shown after Google Sheets data sync completes. | `UpdateToast` |
 | [`Footer.tsx`](file:///Users/nina/development/projects/fupkdkl/src/components/Footer.tsx) | Bottom bar with copyright info and shortcut button to open the Settings modal. | `Footer` |

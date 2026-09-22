@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Palmedex — Brand Identity & Mobile UI Presentation Kit</title>
+  <meta name="description" content="Cohesive Brand Identity and Mobile UI Presentation Kit for Palmedex, an offline-first clinical medication reference tool.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="bg-slate-950 text-slate-100 antialiased">
+  
+  <!-- Global Navigation Header -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="brand-group">
+        <img src="assets/vectors/palmedex-icon-mark.svg" alt="Palmedex Emblem" class="nav-logo-icon">
+        <div class="brand-text">
+          <span class="brand-title">Palme<span class="text-teal">dex</span></span>
+          <span class="brand-badge">Medication Reference Tool</span>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <a href="#overview">Overview</a>
+        <a href="#visual-assets">Visual Assets</a>
+        <a href="#interactive-simulator">Interactive UI Simulator</a>
+        <a href="#color-system">Design Tokens</a>
+        <a href="#vector-architecture">Vector Suite</a>
+        <a href="BRAND_GUIDELINES.md" target="_blank" class="nav-doc-btn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          Brand Guidelines
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="overview">
+    <div class="hero-glow"></div>
+    <div class="hero-content">
+      <div class="pill-badge">
+        <span class="pulsing-dot"></span>
+        <span>OFFLINE-FIRST CLINICAL REFERENCE</span>
+      </div>
+      <h1 class="hero-title">
+        A Unified Clinical Identity for <span class="gradient-text">Palmedex</span>
+      </h1>
+      <p class="hero-description">
+        Fusing the iconic coastal palm frond of the Kuala Langat healthcare district with high-precision clinical medicine (<em>medex</em>). Engineered for instantaneous offline drug searches, unmissable quota safeguards, and rigorous clinical decision support.
+      </p>
+      
+      <div class="hero-stats">
+        <div class="stat-card">
+          <div class="stat-val text-teal">0 ms</div>
+          <div class="stat-lbl">Offline Query Latency</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-val text-amber">#facc15</div>
+          <div class="stat-lbl">Warning Amber Quota Border</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-val text-teal">15.8:1</div>
+          <div class="stat-lbl">WCAG AAA Contrast Ratio</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-val text-slate">512 px</div>
+          <div class="stat-lbl">Maskable Safe-Zone PWA</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 1: Required Visual Assets Showcase -->
+  <section class="section-container" id="visual-assets">
+    <div class="section-header">
+      <span class="section-sub">Deliverable 1 & 2</span>
+      <h2 class="section-title">Core Visual Assets</h2>
+      <p class="section-desc">Modern minimalist iconography, loading splash graphics, and high-fidelity mobile UI suites produced specifically for Palmedex.</p>
+    </div>
+
+    <!-- Asset Cards Grid -->
+    <div class="asset-grid">
+      
+      <!-- Card 1: App Icon Emblem -->
+      <div class="asset-card">
+        <div class="asset-media-box">
+          <img src="assets/images/palmedex_app_icon.jpg" alt="Palmedex App Icon Emblem" class="asset-img">
+          <div class="asset-overlay">
+            <span class="badge-tech">1:1 App Store / PWA Icon</span>
+          </div>
+        </div>
+        <div class="asset-details">
+          <div class="asset-tag text-teal">Visual Asset 1</div>
+          <h3 class="asset-title">Modern Minimalist App Icon Emblem</h3>
+          <p class="asset-summary">
+            Seamlessly merges a stylized symmetrical palm frond with a clinical medical cross and central capsule pill silhouette. Set on deep slate navy with radiant teal and warning amber rim illumination.
+          </p>
+          <div class="asset-meta">
+            <span>Dimensions: 1024 × 1024</span>
+            <a href="assets/images/palmedex_app_icon.jpg" download class="link-download">Download JPG</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2: Splash Screen Graphic -->
+      <div class="asset-card">
+        <div class="asset-media-box">
+          <img src="assets/images/palmedex_splash_graphic.jpg" alt="In-App Loading Splash Screen Graphic" class="asset-img">
+          <div class="asset-overlay">
+            <span class="badge-tech">3:4 In-App Loading Splash</span>
+          </div>
+        </div>
+        <div class="asset-details">
+          <div class="asset-tag text-teal">Visual Asset 2</div>
+          <h3 class="asset-title">In-App Splash Screen Graphic</h3>
+          <p class="asset-summary">
+            Features a digital medical tablet display surrounded by abstract glowing palm-frond health vectors, flowing cyan telemetry streams, and floating medication data nodes.
+          </p>
+          <div class="asset-meta">
+            <span>Cold-boot IndexedDB Hydration</span>
+            <a href="assets/images/palmedex_splash_graphic.jpg" download class="link-download">Download JPG</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3: Mobile UI Mockups Suite -->
+      <div class="asset-card col-span-2">
+        <div class="asset-media-box showcase-box">
+          <img src="assets/images/palmedex_ui_showcase.jpg" alt="Palmedex Mobile UI Mockups Suite" class="asset-img">
+          <div class="asset-overlay">
+            <span class="badge-tech">16:9 Mobile App UI Mockup Suite</span>
+          </div>
+        </div>
+        <div class="asset-details">
+          <div class="asset-tag text-teal">Visual Asset 3</div>
+          <h3 class="asset-title">Mobile UI Mockups: The 4 Core Clinical Pillars</h3>
+          <p class="asset-summary">
+            From left to right: <strong>Instant Medication Search</strong> (instant multi-index lookup &amp; filter pills), <strong>Drug Quota Alert</strong> (high-visibility warning amber glowing banner and authorized prescriber tags), <strong>Clinical Drug Monograph</strong> (dosage formula, renal/hepatic adjustments, and contraindications), and <strong>Offline Database Sync</strong> (100% offline indicator &amp; cache counters).
+          </p>
+          <div class="asset-meta">
+            <span>Format: 1920 × 1080 Ultra HD</span>
+            <a href="assets/images/palmedex_ui_showcase.jpg" download class="link-download">Download Suite</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 2: Interactive Mobile Device Simulator -->
+  <section class="section-container" id="interactive-simulator">
+    <div class="section-header">
+      <span class="section-sub">Live Experience</span>
+      <h2 class="section-title">Interactive Mobile UI Simulator</h2>
+      <p class="section-desc">Test and explore the 4 live clinical interfaces directly inside an interactive mobile viewport simulator.</p>
+    </div>
+
+    <!-- Simulator Tabs -->
+    <div class="simulator-wrapper">
+      
+      <!-- Screen Navigation Sidebar -->
+      <div class="simulator-controls">
+        <h4 class="control-heading">Select Clinical View</h4>
+        
+        <button class="sim-tab active" data-screen="search">
+          <div class="tab-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </div>
+          <div class="tab-info">
+            <div class="tab-title">1. Medication Search</div>
+            <div class="tab-desc">Instant lookup, ATC codes &amp; generic index</div>
+          </div>
+        </button>
+
+        <button class="sim-tab" data-screen="quota">
+          <div class="tab-icon text-amber">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          </div>
+          <div class="tab-info">
+            <div class="tab-title">2. Drug Quota Alert</div>
+            <div class="tab-desc">Warning amber glowing banner &amp; prescribers</div>
+          </div>
+        </button>
+
+        <button class="sim-tab" data-screen="monograph">
+          <div class="tab-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          </div>
+          <div class="tab-info">
+            <div class="tab-title">3. Clinical Monograph</div>
+            <div class="tab-desc">Dosage, renal adjustment &amp; Quest3</div>
+          </div>
+        </button>
+
+        <button class="sim-tab" data-screen="sync">
+          <div class="tab-icon text-teal">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/><path d="M16 21h5v-5"/></svg>
+          </div>
+          <div class="tab-info">
+            <div class="tab-title">4. Offline Database Sync</div>
+            <div class="tab-desc">IndexedDB hydration, cache telemetry</div>
+          </div>
+        </button>
+
+        <!-- Feature Explainer Box -->
+        <div class="screen-feature-notes" id="screenFeatureNotes">
+          <h5>Active Screen Highlights</h5>
+          <p id="featureNotesContent">
+            Instant client-side filter with zero server dependency. Matches generic names, brand names, and MDC categories instantaneously.
+          </p>
+        </div>
+      </div>
+
+      <!-- Interactive Phone Mockup Shell -->
+      <div class="phone-viewport-container">
+        <div class="phone-mockup">
+          <!-- Dynamic Island / Speaker Bar -->
+          <div class="phone-notch">
+            <div class="camera-sensor"></div>
+            <div class="speaker-pill"></div>
+          </div>
+
+          <!-- Phone Screen Content (Dynamic Views) -->
+          <div class="phone-screen-inner" id="phoneScreen">
+            
+            <!-- SCREEN 1: SEARCH VIEW -->
+            <div class="screen-view active" id="view-search">
+              <div class="app-header">
+                <div class="app-brand">
+                  <img src="assets/vectors/palmedex-icon-mark.svg" class="app-logo" alt="">
+                  <div>
+                    <div class="app-title">Palmedex</div>
+                    <div class="app-sub">Medication Reference Tool</div>
+                  </div>
+                </div>
+                <div class="app-status-badge">
+                  <span class="status-dot"></span> Offline
+                </div>
+              </div>
+
+              <!-- Search Bar -->
+              <div class="app-search-box">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                <input type="text" id="liveSearchInput" placeholder="Search drug or brand (e.g. Augmentin)" value="Amoxicillin + Clavulanate">
+                <button class="search-clear" id="clearSearchBtn">&times;</button>
+              </div>
+
+              <!-- Quick Filter Chips -->
+              <div class="filter-chips-row">
+                <span class="filter-chip active" data-filter="all">All</span>
+                <span class="filter-chip" data-filter="antibiotic">Antibiotics</span>
+                <span class="filter-chip" data-filter="cvs">CVS</span>
+                <span class="filter-chip" data-filter="endocrine">Endocrine</span>
+                <span class="filter-chip text-amber" data-filter="quota">Quota Only</span>
+              </div>
+
+              <!-- Medication List Results -->
+              <div class="med-list" id="medListContainer">
+                <!-- Drug Item 1 (With Quota) -->
+                <div class="med-card has-quota" onclick="switchSimulatorTab('quota')">
+                  <div class="med-top">
+                    <div>
+                      <div class="med-generic">Amoxicillin + Clavulanate</div>
+                      <div class="med-brand">Augmentin • Clavamox</div>
+                    </div>
+                    <span class="badge-quota-mini">QUOTA</span>
+                  </div>
+                  <div class="med-desc">Oral Tablet 625mg / Suspension 228mg/5ml</div>
+                  <div class="med-footer">
+                    <span class="tag-mdc">MDC: J01CR02</span>
+                    <span class="tag-cat text-amber">Cat B (Specialist / MO)</span>
+                  </div>
+                </div>
+
+                <!-- Drug Item 2 -->
+                <div class="med-card" onclick="switchSimulatorTab('monograph')">
+                  <div class="med-top">
+                    <div>
+                      <div class="med-generic">Metformin HCl</div>
+                      <div class="med-brand">Glucophage 500mg, 850mg</div>
+                    </div>
+                    <span class="badge-cat-b">CAT B</span>
+                  </div>
+                  <div class="med-desc">Biguanide oral hypoglycaemic agent</div>
+                  <div class="med-footer">
+                    <span class="tag-mdc">MDC: A10BA02</span>
+                    <span class="tag-cat text-teal">Unrestricted PKD</span>
+                  </div>
+                </div>
+
+                <!-- Drug Item 3 -->
+                <div class="med-card" onclick="switchSimulatorTab('monograph')">
+                  <div class="med-top">
+                    <div>
+                      <div class="med-generic">Amlodipine Besylate</div>
+                      <div class="med-brand">Norvasc 5mg, 10mg</div>
+                    </div>
+                    <span class="badge-cat-b">CAT B</span>
+                  </div>
+                  <div class="med-desc">Dihydropyridine Calcium Channel Blocker</div>
+                  <div class="med-footer">
+                    <span class="tag-mdc">MDC: C08CA01</span>
+                    <span class="tag-cat text-teal">Reference Standard</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- SCREEN 2: QUOTA ALERT VIEW -->
+            <div class="screen-view" id="view-quota">
+              <div class="screen-sub-header">
+                <button class="back-btn" onclick="switchSimulatorTab('search')">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+                </button>
+                <span>Drug Quota Control</span>
+                <span class="header-action-dot"></span>
+              </div>
+
+              <!-- High-Visibility Glowing Amber Alert Card -->
+              <div class="quota-alert-banner">
+                <div class="quota-alert-icon">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#facc15" stroke-width="2.5"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                </div>
+                <div class="quota-alert-text">
+                  <h4>QUOTA CONTROL ACTIVE</h4>
+                  <p>Prescribing this medication is strictly monitored against monthly district allocations to avoid stockouts.</p>
+                </div>
+              </div>
+
+              <!-- Restriction Notice Card -->
+              <div class="quota-detail-card">
+                <div class="detail-label">RESTRICTION NOTICE</div>
+                <div class="detail-val">Tier 2 Specialist or FMS Endorsement Required</div>
+                <p class="detail-note">Medical Officers (MO) can initiate a maximum 14-day starter pack before Family Medicine Specialist review.</p>
+              </div>
+
+              <!-- Authorized Prescribers Table -->
+              <div class="prescribers-card">
+                <div class="detail-label">AUTHORIZED PRESCRIBER TIERS</div>
+                <div class="prescriber-tier tier-ok">
+                  <span class="tier-badge">Cat A / A*</span>
+                  <span>Family Medicine Specialist (FMS)</span>
+                  <span class="tier-status">Authorized</span>
+                </div>
+                <div class="prescriber-tier tier-conditional">
+                  <span class="tier-badge">Cat B</span>
+                  <span>Medical Officer (14-Day Starter Pack)</span>
+                  <span class="tier-status">Conditional</span>
+                </div>
+                <div class="prescriber-tier tier-restricted">
+                  <span class="tier-badge">Cat C</span>
+                  <span>Assistant Medical Officer (AMO)</span>
+                  <span class="tier-status text-red">Restricted</span>
+                </div>
+              </div>
+
+              <div class="quota-action-box">
+                <button class="btn-quota-protocol" onclick="alert('Viewing Kuala Langat Drug Committee (JKUK) Quota Protocol')">
+                  View District Quota Protocol
+                </button>
+              </div>
+            </div>
+
+            <!-- SCREEN 3: CLINICAL DRUG MONOGRAPH VIEW -->
+            <div class="screen-view" id="view-monograph">
+              <div class="screen-sub-header">
+                <button class="back-btn" onclick="switchSimulatorTab('search')">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+                </button>
+                <span>Clinical Monograph</span>
+                <span class="badge-pregnancy">Pregnancy B</span>
+              </div>
+
+              <!-- Drug Title Banner -->
+              <div class="monograph-header-card">
+                <h3 class="mono-name">Augmentin</h3>
+                <div class="mono-gen">Amoxicillin + Clavulanate Potassium</div>
+                <div class="mono-meta-row">
+                  <span class="tag-mdc">ATC: J01CR02</span>
+                  <span class="tag-status-ok">Quest3 Registered</span>
+                </div>
+              </div>
+
+              <!-- Dosage Formula Section -->
+              <div class="mono-section">
+                <div class="mono-section-title">DOSAGE REGIMEN</div>
+                <div class="mono-row">
+                  <span class="row-lbl">Adult Standard:</span>
+                  <span class="row-val">625 mg every 8 hours (TDS) or 1000 mg BD PO</span>
+                </div>
+                <div class="mono-row">
+                  <span class="row-lbl">Severe Infection:</span>
+                  <span class="row-val">1.2 g IV every 8 hours</span>
+                </div>
+                <div class="mono-row">
+                  <span class="row-lbl">Paediatric:</span>
+                  <span class="row-val">25-45 mg/kg/day divided BD (amoxicillin component)</span>
+                </div>
+              </div>
+
+              <!-- Renal Impairment Adjustment -->
+              <div class="mono-section">
+                <div class="mono-section-title">RENAL IMPAIRMENT ADJUSTMENTS</div>
+                <div class="mono-row">
+                  <span class="row-lbl">CrCl &gt; 30 mL/min:</span>
+                  <span class="row-val">No adjustment required</span>
+                </div>
+                <div class="mono-row">
+                  <span class="row-lbl">CrCl 10-30 mL/min:</span>
+                  <span class="row-val text-amber">625 mg BD maximum</span>
+                </div>
+                <div class="mono-row">
+                  <span class="row-lbl">CrCl &lt; 10 mL/min:</span>
+                  <span class="row-val text-red">625 mg every 24 hours</span>
+                </div>
+              </div>
+
+              <!-- Contraindications & Warnings -->
+              <div class="mono-section alert-border-red">
+                <div class="mono-section-title text-red">CONTRAINDICATIONS</div>
+                <p class="contra-text">
+                  Hypersensitivity to penicillins, beta-lactams, or history of amoxicillin-clavulanate-associated jaundice / hepatic dysfunction.
+                </p>
+              </div>
+            </div>
+
+            <!-- SCREEN 4: OFFLINE DATABASE SYNC -->
+            <div class="screen-view" id="view-sync">
+              <div class="screen-sub-header">
+                <button class="back-btn" onclick="switchSimulatorTab('search')">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+                </button>
+                <span>Offline Database Telemetry</span>
+                <span class="header-action-dot"></span>
+              </div>
+
+              <!-- Ready Shield Badge -->
+              <div class="sync-status-card">
+                <div class="sync-check-circle" id="syncShield">
+                  <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#2dd4bf" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <h3 class="sync-title" id="syncTitleText">100% Offline Ready</h3>
+                <p class="sync-subtitle">All Kuala Langat clinical medication records and quota protocols are stored locally on your device.</p>
+              </div>
+
+              <!-- Telemetry Counters Grid -->
+              <div class="telemetry-grid">
+                <div class="telemetry-card">
+                  <div class="telemetry-num text-teal">542</div>
+                  <div class="telemetry-lbl">IndexedDB Drugs</div>
+                </div>
+                <div class="telemetry-card">
+                  <div class="telemetry-num text-amber">48</div>
+                  <div class="telemetry-lbl">Quota Protocols</div>
+                </div>
+                <div class="telemetry-card">
+                  <div class="telemetry-num text-teal">100%</div>
+                  <div class="telemetry-lbl">Cache Hit Rate</div>
+                </div>
+                <div class="telemetry-card">
+                  <div class="telemetry-num text-slate">2.4 MB</div>
+                  <div class="telemetry-lbl">Local Storage</div>
+                </div>
+              </div>
+
+              <!-- Sync Details -->
+              <div class="sync-details-box">
+                <div class="sync-detail-line">
+                  <span>Last Sync Status:</span>
+                  <span class="text-teal font-mono">SUCCESS (v2.8.4)</span>
+                </div>
+                <div class="sync-detail-line">
+                  <span>Sync Timestamp:</span>
+                  <span id="syncTimestampDisplay" class="font-mono text-slate">Today at 08:30 AM</span>
+                </div>
+                <div class="sync-detail-line">
+                  <span>Connection Mode:</span>
+                  <span class="status-offline-pill">OFFLINE RECEPTIVE</span>
+                </div>
+              </div>
+
+              <button class="btn-sync-action" id="triggerSyncBtn" onclick="runSyncSimulation()">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/><path d="M16 21h5v-5"/></svg>
+                <span>Simulate Cloud Check &amp; Sync</span>
+              </button>
+            </div>
+
+          </div>
+
+          <!-- Phone Home Indicator Bar -->
+          <div class="phone-home-indicator"></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 3: Design Tokens & Color System Explorer -->
+  <section class="section-container" id="color-system">
+    <div class="section-header">
+      <span class="section-sub">Harmonious Color Palette</span>
+      <h2 class="section-title">Design Tokens &amp; Color System</h2>
+      <p class="section-desc">Engineered for nocturnal clinical legibility and maximum contrast during high-stress medical decisions. Click any swatch to copy its Hex code.</p>
+    </div>
+
+    <div class="palette-groups">
+      
+      <!-- Group 1: Deep Slate Navy -->
+      <div class="palette-category">
+        <h4 class="category-heading">1. Deep Slate Navy — Canvas &amp; Surfaces</h4>
+        <div class="swatches-grid">
+          <div class="swatch-card" onclick="copyToken('#0f172a', 'Slate Navy 950')">
+            <div class="swatch-color" style="background: #0f172a; border: 1px solid #334155;"></div>
+            <div class="swatch-info">
+              <div class="swatch-name">Slate 950 (Primary Canvas)</div>
+              <div class="swatch-hex">#0f172a</div>
+              <div class="swatch-role">Viewport &amp; PWA Status Bar</div>
+            </div>
+          </div>
+          <div class="swatch-card" onclick="copyToken('#1e293b', 'Slate Navy 800')">
+            <div class="swatch-color" style="background: #1e293b; border: 1px solid #334155;"></div>
+            <div class="swatch-info">
+              <div class="swatch-name">Slate 800 (Card Surface)</div>
+              <div class="swatch-hex">#1e293b</div>
+              <div class="swatch-role">Modal Sheets, Drug Cards</div>
+            </div>
+          </div>
+          <div class="swatch-card" onclick="copyToken('#334155', 'Slate Navy 700')">
+            <div class="swatch-color" style="background: #334155;"></div>
+            <div class="swatch-info">
+              <div class="swatch-name">Slate 700 (Border &amp; Divider)</div>
+              <div class="swatch-hex">#334155</div>
+              <div class="swatch-role">1px Card Outlines, Chip Inactive</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Group 2: Clinical Vibrant Teal -->
+      <div class="palette-category">
+        <h4 class="category-heading">2. Clinical Vibrant Teal — Core Brand &amp; Positive States</h4>
+        <div class="swatches-grid">
+          <div class="swatch-card" onclick="copyToken('#14b8a6', 'Vibrant Teal 500')">
+            <div class="swatch-color" style="background: #14b8a6;"></div>
+            <div class="swatch-info">
+              <div class="swatch-name">Teal 500 (Primary Brand)</div>
+              <div class="swatch-hex">#14b8a6</div>
+              <div class="swatch-role">Key Buttons, Active Tabs, Logo</div>
+            </div>
+          </div>
+          <div class="swatch-card" onclick="copyToken('#0d9488', 'Teal 600')">
+            <div class="swatch-color" style="background: #0d9488;"></div>
+            <div class="swatch-info">
+              <div class="swatch-name">Teal 600 (Dark Accent)</div>
+              <div class="swatch-hex">#0d9488</div>
+              <div class="swatch-role">Pressed States &amp; Gradients</div>
+            </div>
+          </div>
+          <div class="swatch-card" onclick="copyToken('#2dd4bf', 'Teal 400')">
+            <div class="swatch-color" style="background: #2dd4bf;"></div>
+            <div class="swatch-info">
+              <div class="swatch-name">Teal 400 (Luminous Highlight)</div>
+              <div class="swatch-hex">#2dd4bf</div>
+              <div class="swatch-role">Glow Borders, Offline Sync Dot</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Group 3: Warning Amber & Clinical Accents -->
+      <div class="palette-category">
+        <h4 class="category-heading">3. Warning Amber &amp; Clinical Safeguards</h4>
+        <div class="swatches-grid">
+          <div class="swatch-card" onclick="copyToken('#facc15', 'Warning Amber 400')">
+            <div class="swatch-color" style="background: #facc15;"></div>
+            <div class="swatch-info">
+              <div class="swatch-name">Amber 400 (Quota Alert)</div>
+              <div class="swatch-hex">#facc15</div>
+              <div class="swatch-role">High-Visibility Quota Glow &amp; Cross</div>
+            </div>
+          </div>
+          <div class="swatch-card" onclick="copyToken('#eab308', 'Amber 500')">
+            <div class="swatch-color" style="background: #eab308;"></div>
+            <div class="swatch-info">
+              <div class="swatch-name">Amber 500 (Quota Border)</div>
+              <div class="swatch-hex">#eab308</div>
+              <div class="swatch-role">High-Risk Badge Text</div>
+            </div>
+          </div>
+          <div class="swatch-card" onclick="copyToken('#ef4444', 'Danger Red 500')">
+            <div class="swatch-color" style="background: #ef4444;"></div>
+            <div class="swatch-info">
+              <div class="swatch-name">Red 500 (Contraindications)</div>
+              <div class="swatch-hex">#ef4444</div>
+              <div class="swatch-role">Allergy Alerts, Severe Warnings</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 4: Vector Architecture & PWA Standards -->
+  <section class="section-container" id="vector-architecture">
+    <div class="section-header">
+      <span class="section-sub">Production-Ready Code</span>
+      <h2 class="section-title">Scalable Vector Suite &amp; PWA Specs</h2>
+      <p class="section-desc">Handcrafted SVGs adhering to strict W3C PWA standards, complete with safe-zone buffers for Android adaptive icons and iOS home screens.</p>
+    </div>
+
+    <div class="vector-grid">
+      
+      <!-- Vector 1: Icon Mark -->
+      <div class="vector-card">
+        <div class="vector-preview">
+          <img src="assets/vectors/palmedex-icon-mark.svg" alt="Palmedex Icon Mark">
+        </div>
+        <div class="vector-details">
+          <h4>Palmedex Emblem Mark</h4>
+          <p>Geometric palm frond + medical cross + capsule pill emblem. Perfect for headers, favicons, and social avatars.</p>
+          <div class="vector-actions">
+            <a href="assets/vectors/palmedex-icon-mark.svg" download class="btn-sm">Download SVG</a>
+            <button class="btn-sm btn-secondary" onclick="copyFileContent('assets/vectors/palmedex-icon-mark.svg')">Copy SVG Code</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Vector 2: Horizontal Logo Lockup -->
+      <div class="vector-card">
+        <div class="vector-preview">
+          <img src="assets/vectors/palmedex-logo-horizontal.svg" alt="Palmedex Horizontal Logo">
+        </div>
+        <div class="vector-details">
+          <h4>Horizontal Logo Lockup</h4>
+          <p>Primary horizontal masthead featuring the icon mark, custom high-contrast typography, and the OFFLINE status pill.</p>
+          <div class="vector-actions">
+            <a href="assets/vectors/palmedex-logo-horizontal.svg" download class="btn-sm">Download SVG</a>
+            <button class="btn-sm btn-secondary" onclick="copyFileContent('assets/vectors/palmedex-logo-horizontal.svg')">Copy SVG Code</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Vector 3: PWA Maskable Icon with Safe Zone -->
+      <div class="vector-card">
+        <div class="vector-preview relative-mask">
+          <img src="assets/vectors/palmedex-maskable-icon.svg" alt="PWA Maskable Icon">
+          <div class="safe-zone-overlay" title="410px Safe Zone Circle"></div>
+        </div>
+        <div class="vector-details">
+          <h4>PWA Maskable Icon (512×512)</h4>
+          <p>Full-bleed `#0f172a` slate background with an 80% safe zone circle (~410px). Guaranteed zero clipping across OneUI squircle, Pixel circle, and iOS shapes.</p>
+          <div class="vector-actions">
+            <a href="assets/vectors/palmedex-maskable-icon.svg" download class="btn-sm">Download SVG</a>
+            <button class="btn-sm btn-secondary" onclick="copyFileContent('assets/vectors/palmedex-maskable-icon.svg')">Copy SVG Code</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 5: Integration Guide for Engineering -->
+  <section class="section-container">
+    <div class="integration-banner">
+      <div class="integration-content">
+        <h3>Ready to deploy to the FUPKDKL PWA?</h3>
+        <p>
+          All assets are organized and structured to match the target specifications in <code>pwa-assets-reference.md</code>. Read the full brand guidelines or integrate directly into your React / Vite application.
+        </p>
+        <div class="integration-btns">
+          <a href="BRAND_GUIDELINES.md" target="_blank" class="btn-primary">View BRAND_GUIDELINES.md</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">Copied to clipboard!</div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="assets/vectors/palmedex-icon-mark.svg" alt="" width="24" height="24">
+        <span>Palmedex Clinical Presentation Kit</span>
+      </div>
+      <div class="footer-copy">
+        Pejabat Kesihatan Daerah Kuala Langat • Offline-First Clinical Medication Reference Tool
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

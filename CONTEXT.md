@@ -8,7 +8,8 @@ Official domain concepts, clinical terminology, and administrative rules for **F
 
 - **PKDKL (Pejabat Kesihatan Daerah Kuala Langat):** District Health Office of Kuala Langat under the Ministry of Health Malaysia (MOH), governing primary care health clinics (Klinik Kesihatan) and community dispensaries in the district.
 - **FUKKM (Formulari Ubat Kementerian Kesihatan Malaysia):** National MOH Drug Formulary establishing standard medication lists, anatomical/therapeutic system groupings, and baseline prescribing tiers.
-- **FUPKDKL (District Drug Formulary):** Localized subset of FUKKM actively procured, stocked, and authorized for outpatient primary care facilities within PKD Kuala Langat.
+- **Palmedex (Medication Reference Tool):** Offline-first clinical decision-support and medication reference application for healthcare practitioners in PKD Kuala Langat, indexing available district pharmaceuticals, prescribing tiers, and quota controls without asserting statutory declaration as a standalone formulary.
+- **FUPKDKL:** Historical project acronym for the PKD Kuala Langat medication reference dataset and application repository.
 
 ---
 

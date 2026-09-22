@@ -62,7 +62,7 @@ export function DisclaimerDialog({ isOpen, onAccept }: DisclaimerDialogProps) {
               Medical Disclaimer & Terms of Use
             </h2>
             <p className="text-xs text-slate-500 dark:text-slate-400">
-              District Drug Formulary PKD Kuala Langat v2
+              Palmedex — Medication Reference Tool • PKD Kuala Langat
             </p>
           </div>
         </div>

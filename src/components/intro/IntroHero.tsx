@@ -33,14 +33,14 @@ export function IntroHero({
             </div>
 
             <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-tight">
-              District Drug Formulary <br />
+              Palmedex <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-500 via-teal-400 to-cyan-400">
-                PKD Kuala Langat
+                Medication Reference Tool
               </span>
             </h1>
 
             <p className="text-slate-600 dark:text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl">
-              A modern, offline-ready Progressive Web App (PWA) engineered for instant clinical medication lookups, MDC code cross-referencing, and real-time quota-controlled drug tracking across Klinik Kesihatan Kuala Langat.
+              An offline-first clinical decision-support and medication reference tool for healthcare professionals in PKD Kuala Langat, indexing district pharmaceuticals, prescribing tiers, and real-time quota controls.
             </p>
 
             {/* Feature Stat Cards */}
@@ -100,13 +100,13 @@ export function IntroHero({
                       <div className="p-0.5 bg-brand-500/10 rounded-lg border border-brand-500/25 shrink-0 overflow-hidden flex items-center justify-center">
                         <img
                           src={`${import.meta.env.BASE_URL}icon-192.png`}
-                          alt="PKDKL Formulary Logo"
+                          alt="Palmedex Logo"
                           className="size-7 object-contain rounded-md"
                         />
                       </div>
                       <div>
-                        <p className="font-bold text-xs leading-none">District Drug Formulary</p>
-                        <p className="text-[10px] text-brand-400 font-semibold">PKD Kuala Langat</p>
+                        <p className="font-bold text-xs leading-none">Palmedex</p>
+                        <p className="text-[10px] text-brand-400 font-semibold">Medication Reference Tool</p>
                       </div>
                     </div>
                     <div className="flex gap-1">

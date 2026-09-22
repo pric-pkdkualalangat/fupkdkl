@@ -53,7 +53,8 @@ describe('IntroPage component', () => {
       />
     );
 
-    expect(screen.getAllByText(/District Drug Formulary/i).length).toBeGreaterThan(0);
+    expect(screen.getAllByText(/Palmedex/i).length).toBeGreaterThan(0);
+    expect(screen.getAllByText(/Medication Reference Tool/i).length).toBeGreaterThan(0);
     expect(screen.getByText('Try the Live Formulary Search')).toBeInTheDocument();
     expect(screen.getByText('Neon-Yellow Quota Alert System')).toBeInTheDocument();
     expect(screen.getByText('How to Install as a PWA App')).toBeInTheDocument();

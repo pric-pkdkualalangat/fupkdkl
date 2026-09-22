@@ -59,7 +59,7 @@ export function PWAUpdatePrompt() {
               App Update Available
             </h4>
             <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-              A new build of District Drug Formulary is ready. Update now to apply the latest features and fixes.
+              A new build of Palmedex is ready. Update now to apply the latest features and fixes.
             </p>
           </div>
         </div>

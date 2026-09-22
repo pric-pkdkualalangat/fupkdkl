@@ -31,7 +31,7 @@ export function IOSInstallDialog({ isOpen, onClose }: IOSInstallDialogProps) {
           <div className="p-1 bg-brand-500/10 dark:bg-brand-500/20 rounded-2xl border border-brand-500/25 shrink-0 overflow-hidden flex items-center justify-center shadow-sm">
             <img
               src={`${import.meta.env.BASE_URL}apple-touch-icon.png`}
-              alt="Formulary App Icon"
+              alt="Palmedex App Icon"
               className="size-11 rounded-xl object-contain"
             />
           </div>
@@ -40,7 +40,7 @@ export function IOSInstallDialog({ isOpen, onClose }: IOSInstallDialogProps) {
               Install on iOS Safari
             </h2>
             <p className="text-xs text-slate-500 dark:text-slate-400 font-medium">
-              Add District Drug Formulary to your Home Screen for instant offline access
+              Add Palmedex to your Home Screen for instant offline access
             </p>
           </div>
         </div>
@@ -84,7 +84,7 @@ export function IOSInstallDialog({ isOpen, onClose }: IOSInstallDialogProps) {
                 Tap &quot;Add&quot; in the top-right corner
               </p>
               <p className="text-slate-500 dark:text-slate-400">
-                The Formulary app icon will be added to your device home screen.
+                The Palmedex app icon will be added to your device home screen.
               </p>
             </div>
           </div>

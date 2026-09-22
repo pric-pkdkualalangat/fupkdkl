@@ -182,7 +182,7 @@ describe('Formulari App integration', () => {
     });
   });
 
-  it('navigates to /intro via header button and back to / via Launch App', async () => {
+  it('navigates to /intro via settings dialog guide button and back to / via Launch App', async () => {
     await saveMedications(mockMeds);
     render(<App />);
 
@@ -191,6 +191,11 @@ describe('Formulari App integration', () => {
     });
     fireEvent.click(acceptBtn);
 
+    // Open Settings dialog
+    const settingsBtn = screen.getByRole('button', { name: /Open Settings/i });
+    fireEvent.click(settingsBtn);
+
+    // Click Guide button inside Settings dialog
     const guideBtn = screen.getByRole('button', { name: /Open App Overview and Installation Guide/i });
     fireEvent.click(guideBtn);
 

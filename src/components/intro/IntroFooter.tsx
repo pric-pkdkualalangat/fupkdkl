@@ -9,14 +9,20 @@ export function IntroFooter({ onLaunchApp }: IntroFooterProps) {
         <div className="flex items-center gap-3">
           <div className="p-1 bg-brand-500/10 dark:bg-brand-500/15 rounded-xl border border-brand-500/25 shadow-sm shrink-0 overflow-hidden flex items-center justify-center">
             <img
+              src={`${import.meta.env.BASE_URL}icon-192-light.png`}
+              alt=""
+              aria-hidden="true"
+              className="size-8 object-contain rounded-lg dark:hidden"
+            />
+            <img
               src={`${import.meta.env.BASE_URL}icon-192.png`}
-              alt="PKDKL Formulary Logo"
-              className="size-8 object-contain rounded-lg"
+              alt="Palmedex Logo"
+              className="size-8 object-contain rounded-lg hidden dark:block"
             />
           </div>
           <div>
             <p className="font-bold text-sm text-slate-900 dark:text-white">
-              District Drug Formulary PKD Kuala Langat
+              Palmedex — Medication Reference Tool
             </p>
             <p className="text-xs text-slate-500 dark:text-slate-400">
               Pejabat Kesihatan Daerah Kuala Langat

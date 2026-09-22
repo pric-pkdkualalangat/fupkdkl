@@ -13,6 +13,36 @@ const buildTime = now.toLocaleString('en-GB', {
   timeStyle: 'medium',
 });
 
+function rootPwaAssetsFallback(): import('vite').Plugin {
+  return {
+    name: 'root-pwa-assets-fallback',
+    configureServer(server) {
+      server.middlewares.use((req, _res, next) => {
+        const rootAssets = [
+          '/apple-touch-icon.png',
+          '/apple-touch-icon-light.png',
+          '/apple-touch-icon-precomposed.png',
+          '/favicon.ico',
+          '/favicon-32x32.png',
+          '/favicon-32x32-light.png',
+          '/favicon-16x16.png',
+          '/favicon-16x16-light.png',
+          '/icon-192.png',
+          '/icon-192-light.png',
+          '/icon-512.png',
+          '/icon-512-light.png',
+          '/maskable-icon.png',
+          '/manifest.webmanifest',
+        ];
+        if (req.url && rootAssets.includes(req.url)) {
+          req.url = `/fupkdkl${req.url}`;
+        }
+        next();
+      });
+    },
+  };
+}
+
 export default defineConfig({
   base: '/fupkdkl/',
   define: {
@@ -22,33 +52,49 @@ export default defineConfig({
   plugins: [
     react(),
     tailwindcss(),
+    rootPwaAssetsFallback(),
     VitePWA({
       registerType: 'prompt',
+      devOptions: {
+        enabled: true,
+      },
       includeAssets: [
         'favicon.ico',
         'favicon-32x32.png',
+        'favicon-32x32-light.png',
         'favicon-16x16.png',
+        'favicon-16x16-light.png',
         'apple-touch-icon.png',
-        'splash-screen.png',
+        'apple-touch-icon-light.png',
+        'icon-192.png',
+        'icon-192-light.png',
+        'icon-512.png',
+        'icon-512-light.png',
+        'maskable-icon.png',
         'fonts/*.woff2',
       ],
       manifest: {
-        name: 'District Drug Formulary — PKD Kuala Langat',
-        short_name: 'Formulary PKDKL',
-        description: 'District Drug Formulary PWA for PKD Kuala Langat',
+        name: 'Palmedex',
+        short_name: 'Palmedex',
+        description: 'Offline-first clinical medication reference tool for PKD Kuala Langat',
         theme_color: '#0f172a',
         background_color: '#0f172a',
         display: 'standalone',
+        orientation: 'portrait',
+        scope: '/fupkdkl/',
+        start_url: '/fupkdkl/',
         icons: [
           {
             src: 'icon-192.png',
             sizes: '192x192',
             type: 'image/png',
+            purpose: 'any',
           },
           {
             src: 'icon-512.png',
             sizes: '512x512',
             type: 'image/png',
+            purpose: 'any',
           },
           {
             src: 'maskable-icon.png',

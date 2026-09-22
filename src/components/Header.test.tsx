@@ -3,14 +3,14 @@ import { describe, it, expect, vi } from 'vitest';
 import { Header } from './Header';
 
 describe('Header component', () => {
-  it('renders application title, subtitle, and offline status badge', () => {
+  it('renders application title, subtitle, emblem, and offline status badge', () => {
     render(<Header theme="dark" onToggleTheme={() => {}} />);
 
-    expect(screen.getByText(/District Drug Formulary/i)).toBeInTheDocument();
-    expect(screen.getByText(/PKD Kuala Langat/i)).toBeInTheDocument();
-    expect(
-      screen.getByText(/Pejabat Kesihatan Daerah Kuala Langat|Kuala Langat District Health Office/i)
-    ).toBeInTheDocument();
+    expect(screen.getByText(/Palme/i)).toBeInTheDocument();
+    expect(screen.getByText(/dex/i)).toBeInTheDocument();
+    expect(screen.getByText(/Medication Reference Tool/i)).toBeInTheDocument();
+    expect(screen.getByText(/Online/i)).toBeInTheDocument();
+    expect(screen.getByAltText(/Palmedex Logo/i)).toBeInTheDocument();
   });
 
   it('triggers onToggleTheme when theme button is clicked in light or dark mode', () => {
@@ -37,7 +37,7 @@ describe('Header component', () => {
       />
     );
 
-    const installBtn = screen.getByRole('button', { name: /Install Formulary App/i });
+    const installBtn = screen.getByRole('button', { name: /Install Palmedex App/i });
     expect(installBtn).toBeInTheDocument();
     fireEvent.click(installBtn);
     expect(handleInstall).toHaveBeenCalledTimes(1);
@@ -59,47 +59,14 @@ describe('Header component', () => {
     expect(handleOpenSettings).toHaveBeenCalledTimes(1);
   });
 
-  it('renders and handles Guide button when onOpenIntro is provided in browser mode', () => {
-    const handleOpenIntro = vi.fn();
-    render(
-      <Header
-        theme="dark"
-        onToggleTheme={() => {}}
-        onOpenIntro={handleOpenIntro}
-        isStandalone={false}
-      />
-    );
-
-    const guideBtn = screen.getByRole('button', { name: /Open App Overview and Installation Guide/i });
-    expect(guideBtn).toBeInTheDocument();
-    fireEvent.click(guideBtn);
-    expect(handleOpenIntro).toHaveBeenCalledTimes(1);
-  });
-
-  it('hides Guide button when isStandalone is true', () => {
-    const handleOpenIntro = vi.fn();
-    render(
-      <Header
-        theme="dark"
-        onToggleTheme={() => {}}
-        onOpenIntro={handleOpenIntro}
-        isStandalone={true}
-      />
-    );
-
-    expect(
-      screen.queryByRole('button', { name: /Open App Overview and Installation Guide/i })
-    ).not.toBeInTheDocument();
-  });
-
   it('updates network status indicator when online and offline window events fire', () => {
     render(<Header theme="dark" onToggleTheme={() => {}} />);
 
     fireEvent(window, new Event('offline'));
-    expect(screen.getByLabelText('Offline')).toBeInTheDocument();
+    expect(screen.getAllByLabelText('Offline').length).toBeGreaterThan(0);
 
     fireEvent(window, new Event('online'));
-    expect(screen.getByLabelText('Online')).toBeInTheDocument();
+    expect(screen.getAllByLabelText('Online').length).toBeGreaterThan(0);
   });
 
   it('renders and handles NAG link with official MOH Google Sites URL', () => {

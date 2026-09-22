@@ -26,7 +26,7 @@ import { SettingsDialog } from './components/SettingsDialog';
 import { TourGuide } from './components/TourGuide';
 import { TourInviteBanner } from './components/TourInviteBanner';
 import { IntroPage } from './components/IntroPage';
-import { Loader2 } from 'lucide-react';
+import { ColdBootSplash } from './components/ColdBootSplash';
 
 export default function App() {
   const { theme, toggleTheme } = useTheme();
@@ -34,7 +34,6 @@ export default function App() {
   const { recentMeds, addRecentMed, clearRecentMeds } = useRecentMeds();
   const {
     isInstallable,
-    isStandalone,
     isBannerVisible,
     isIOSModalOpen,
     promptInstall,
@@ -218,10 +217,8 @@ export default function App() {
             theme={theme}
             onToggleTheme={toggleTheme}
             isInstallable={isInstallable}
-            isStandalone={isStandalone}
             onInstallApp={promptInstall}
             onOpenSettings={() => setIsSettingsOpen(true)}
-            onOpenIntro={() => navigateTo(`${import.meta.env.BASE_URL}intro`)}
           />
 
           {/* Interactive Feature Tour Invitation */}
@@ -258,19 +255,7 @@ export default function App() {
 
         {/* Medication List, Loading Indicator, or Initial Load Screen */}
         {isLoading ? (
-          <div className="flex flex-col items-center justify-center py-12 px-4 space-y-4 text-center">
-            <div className="relative">
-              <img
-                src={`${import.meta.env.BASE_URL}splash-screen.png`}
-                alt="FUPKDKL Digital Formulary Splash Screen"
-                className="w-44 sm:w-52 h-auto object-contain rounded-2xl shadow-xl border border-brand-500/20 dark:border-brand-500/30"
-              />
-            </div>
-            <div className="flex items-center gap-2 text-brand-600 dark:text-brand-400 font-semibold text-sm">
-              <Loader2 className="size-4 animate-spin" />
-              <span>Loading clinical formulary database...</span>
-            </div>
-          </div>
+          <ColdBootSplash />
         ) : isInitialLoadRequired ? (
           <InitialLoadScreen onRetry={retryInitialLoad} />
         ) : (
